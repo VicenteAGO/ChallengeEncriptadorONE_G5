@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <title>Encriptador JS</title>
+</head>
+<body>
+    <header>
+        <img src="./recursos/Logo.svg" alt="">
+        <h1>Encriptador</h1>
+    </header>
+    <main>
+        <div class="contenedor1">
+            <div class="contenedor-texto1">
+                <textarea class="texto1" name="texto1" id="texto1" placeholder="Escriba su texto aqui..." pattern="{a-z}"></textarea>
+            </div>
+            <p>*Solo utilizar letras (no caracteres especiales)</p>
+            <div class="contenedor-botones1">
+                <div class="sub-contenedor1">
+                    <button id="encriptar" class="boton1" type="submit"><img class="svg" src="./recursos/lock-fill.svg" alt="lock-fill">Encriptar</button>
+                    <button id="desencriptar" class="boton2" type="submit"><img class="svg" src="./recursos/unlock-fill.svg" alt="unlock-fill">Desencriptar</button>
+                </div>
+                <div class="sub-contenedor2">
+                    <button id="invertir" class="boton4" type="submit"><img class="svg" src="./recursos/arrow-clockwise.svg" alt="arrow-clockwise">Invertir</button>
+                    <button id="revertir" class="boton5" type="submit"><img class="svg" src="./recursos/arrow-counterclockwise.svg" alt="arrow-counterclockwise">Revertir</button>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor2">
+            <div class="contenedor-texto2" id="texto2">
+            </div>
+            <div class="contenedor-botones2">
+                <button id="copiar" type="submit" class="boton3"><img class="svg" src="./recursos/clipboard-fill.svg" alt="clipboard-fill">Copiar</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="contacto">
+            <h5>Desarrollado por Vicente Guijarro</h5>
+            <a href="https://www.linkedin.com/in/vicenteguijarro" target="blank"><img src="./recursos/linkedin.svg" alt="linkedin"></a>
+            <a href="https://github.com/VicenteAGO" target="blank"><img src="./recursos/github.svg" alt="github"></a>
+        </div>
+    </footer>
+</body>
+<script src="./index.js"></script>
+</html>

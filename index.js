@@ -9,6 +9,12 @@ const botonCinco = document.getElementById("revertir");
 botonUno.addEventListener("click", () => {
     contenido  = document.getElementById("texto1");
     let texto = contenido.value;
+/*Hacemos la validacion de caracteres para que solo acepte letras y numeros*/
+    let caracteresValidos = /^[a-zA-Z\s]+$/;
+    if (!caracteresValidos.test(texto)){
+        alert("Solo letras, sin numeros ni caracteres especiales");
+        return;
+    }
     let textoCifrado = texto
                             .replace(/e/gi, "enter")
                             .replace(/i/gi, "imes")
@@ -47,28 +53,4 @@ botonTres.addEventListener("click", () => {
     textArea.select();
 /*Esta api hace te permite copiar el valor al interactuar con el navegador y el portapapeles del sistema*/
     navigator.clipboard.writeText(textArea.value);
-})
-
-botonCuatro.addEventListener("click", () => {
-    contenido = document.getElementById("texto1");
-    let texto = contenido.value;
-    let textoInvertido = texto.split("").reverse().join("");
-    console.log(textoInvertido);
-    /*Seleccionamos el lugar donde insertaremos nuestro elemento con el texto invertido */
-    let textArea = document.querySelector("#texto2");
-    /*Insertamos el elemento con el texto invertido */
-    textArea.innerHTML=`<textarea id ="texto2">${textoInvertido}</textarea>`;
-    contenido.value = "";
-})
-
-botonCinco.addEventListener("click", () => {
-    contenido = document.getElementById("texto1");
-    let texto = contenido.value;
-    let textoRevertido = texto.split("").reverse().join("");
-    console.log(textoRevertido);
-    /*Seleccionamos el lugar donde insertaremos nuestro elemento con el texto invertido */
-    let textArea = document.querySelector("#texto2");
-    /*Insertamos el elemento con el texto invertido */
-    textArea.innerHTML=`<textarea id ="texto2">${textoRevertido}</textarea>`;
-    contenido.value = "";
 })

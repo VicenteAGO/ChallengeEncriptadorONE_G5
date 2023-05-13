@@ -103,23 +103,23 @@ textarea:focus{
     margin: 0 .5em;
 }
 
-.boton1, .boton2,.boton4, .boton5{
+.boton1, .boton2{
     font-size: 1em;
     padding: .5em;
     border-radius: .75em;
     margin: .5em;
 }
 
-.boton1, .boton2, .boton3, .boton4, .boton5:hover{
+.boton1, .boton2, .boton3:hover{
     cursor: pointer;
 }
-.boton1, .boton5{
+.boton1{
     color: white;
     background: #0A3871;
     width: 160px;
 }
 
-.boton2, .boton3, .boton4{
+.boton2, .boton3{
     color: #0A3871;
     background: #D8DFE8;
     width: 160px;
@@ -159,7 +159,7 @@ textarea:focus{
         flex-direction: row;
     }
 
-    .boton1, .boton2, .boton3, .boton4, .boton5{
+    .boton1, .boton2, .boton3{
         font-size: 1em;
         padding: .5em;
         border-radius: .75em;
